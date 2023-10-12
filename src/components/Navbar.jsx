@@ -71,12 +71,12 @@ const Navbar = () => {
             />
           </li>
           <li>
-            <Link href="#" className="py-4 px-2">
+            <Link href="/post" className="py-4 px-2">
               Home
             </Link>
           </li>
           <li>
-            <Link href="#" className="py-4 px-2">
+            <Link href="/post/article" className="py-4 px-2">
               Article
             </Link>
           </li>
