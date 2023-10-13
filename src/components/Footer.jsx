@@ -15,7 +15,7 @@ const Footer = () => {
         </div>
         <div className="cols-span-1 flex flex-col justify-center  text-white">
           <h1 className="font-bold ">Contact</h1>
-          <p>Prosthoderecleanser@gmail.com</p>
+          <p className="break-words">Prosthoderecleanser@gmail.com</p>
         </div>
         <div className="cols-span-1 flex flex-col justify-center text-white">
           <h1 className="font-bold">Social Media</h1>
