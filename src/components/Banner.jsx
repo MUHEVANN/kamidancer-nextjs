@@ -5,7 +5,7 @@ import React from "react";
 
 const Banner = ({ img }) => {
   return (
-    <div className="pt-[80px] w-full bg-[#f5f5f5] px-5 lg:px-[320px]">
+    <div className="pt-[80px] w-full ">
       <Image
         // src={`http://127.0.0.1:8000/storage/${img}`}
         src={img}

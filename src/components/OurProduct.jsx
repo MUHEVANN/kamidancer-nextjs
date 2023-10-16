@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useRef } from "react";
-import product from "@/image/product.png";
+import product from "@/image/kamidancer-new.jpeg";
 import { motion, useScroll, useTransform } from "framer-motion";
 const OurProduct = () => {
   const refProduct = useRef(null);
@@ -38,11 +38,11 @@ const OurProduct = () => {
             penyakit akibat ketidakmampaun merawat gigi tiruan.
           </p>
         </div>
-        <div className="flex-1">
+        <div className="flex-1 h-[550px]">
           <Image
             src={product}
             alt="kamidancer-product"
-            className="md:w-[300px] lg:w-full"
+            className="w-full lg:w-full h-[250px] lg:h-full object-contain"
           />
         </div>
       </div>

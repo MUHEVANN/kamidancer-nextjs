@@ -1,0 +1,41 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+  model User {
+    id Int @id @default(autoincrement())
+    name String
+    email String
+    password String
+  }
+
+  model Tag {
+    id Int     @id @default(autoincrement())
+    tag_name String 
+    post PostsTag[]
+  }
+  model Posts {
+    id Int     @id @default(autoincrement())
+    title String
+    content String @db.Text
+    tag PostsTag[]
+    created_at DateTime @default(now())
+    updated_at DateTime @updatedAt
+  }
+
+  model PostsTag {
+    tagId Int
+    postId Int  
+
+    tag Tag @relation(fields: [tagId],references: [id])
+    post Posts @relation(fields: [postId],references: [id])
+    @@id([postId,tagId])
+  }

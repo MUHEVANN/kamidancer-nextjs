@@ -7,10 +7,12 @@ import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import PostTes from "@/components/PostTes";
 import { data } from "@/dummy/data";
+import { PrismaClient } from "@prisma/client";
 
-const Page = () => {
+const Page = async () => {
+  // const prisma = new PrismaClient();
   // const posts = await axios.get("http://127.0.0.1:8000/api/posts");
-
+  // const data = await prisma.posts.findMany();
   return (
     <div className="h-auto paddings mb-[80px]">
       <div className="w-full pt-[80px] mb-5">

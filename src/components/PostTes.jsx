@@ -5,7 +5,7 @@ import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 
 const PostTes = ({ props }) => {
-  const { title, content, image, id } = props;
+  const { title, content, id, image } = props;
   let words = content;
   let wordCut = words.split(" ").splice(0, 12).join(" ") + "...";
   return (
