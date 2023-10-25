@@ -1,31 +1,24 @@
-import Post from "@/components/Post";
 import Search from "@/components/Search";
 import axios from "axios";
-import Image from "next/image";
-
-import Link from "next/link";
-import { BsArrowRight } from "react-icons/bs";
 import PostTes from "@/components/PostTes";
-import { data } from "@/dummy/data";
-import { PrismaClient } from "@prisma/client";
 
 const Page = async () => {
-  // const prisma = new PrismaClient();
-  // const posts = await axios.get("http://127.0.0.1:8000/api/posts");
-  // const data = await prisma.posts.findMany();
+  const res = await axios.get("http://127.0.0.1:8000/api/posts");
+  const posts = res.data.data.data;
+  console.log(posts);
   return (
     <div className="h-auto paddings mb-[80px]">
       <div className="w-full pt-[80px] mb-5">
         <Search />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 lg:grid-cols-4 ">
-        {data.map((item) => {
-          return <PostTes props={item} key={item.id} />;
-        })}
+      <div className=" ">
+        <PostTes data={posts} />
       </div>
-      {/* <Post posts={posts.data} /> */}
     </div>
   );
 };
+{
+  /* <Post posts={posts.data} /> */
+}
 
 export default Page;

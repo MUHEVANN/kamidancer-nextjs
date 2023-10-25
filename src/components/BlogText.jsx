@@ -8,8 +8,8 @@ const BlogText = ({ title, desc, image }) => {
         <div className="bg-white pb-[50px] w-full  min-h-screen h-full p-5 rounded">
           <div className="pt-[80px] w-full ">
             <Image
-              // src={`http://127.0.0.1:8000/storage/${img}`}
-              src={image}
+              src={`http://127.0.0.1:8000/storage/${image}`}
+              // src={image}
               alt="kamidancer-blog"
               width={1200}
               height={400}

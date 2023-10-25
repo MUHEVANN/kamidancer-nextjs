@@ -4,11 +4,12 @@ import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 import { HiOutlineSearch } from "react-icons/hi";
-import { data } from "@/dummy/data";
+// import { data } from "@/dummy/data";
 const Search = () => {
+  // const { posts } = usePostStore();
   const url = usePathname();
-  const { query, setQuery } = usePostStore();
-  const filteredData = data.filter((data) => {
+  const { query, setQuery, posts } = usePostStore();
+  const filteredData = posts.filter((data) => {
     return data.title.toLowerCase().includes(query.toLowerCase());
   });
 

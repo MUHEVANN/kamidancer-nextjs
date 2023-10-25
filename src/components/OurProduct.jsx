@@ -1,9 +1,14 @@
 "use client";
 import Image from "next/image";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import product from "@/image/kamidancer-new.jpeg";
 import { motion, useScroll, useTransform } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const OurProduct = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const refProduct = useRef(null);
   const { scrollYProgress } = useScroll({
     target: refProduct,
@@ -12,19 +17,92 @@ const OurProduct = () => {
   const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacity = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   return (
-    // <motion.div
-    //   // style={{ scale, opacity }}
-    //   initial={{ y: 50 }}
-    //   whileInView={{ y: 0 }}
-    //   transition={{ duaration: 0.5, type: "spring" }}
-    //   className="h-auto relative "
-    //   id="product"
-    //   // ref={refProduct}
-    // >
     <div id="product" className="h-auto relative ">
-      <h1 className="text-center header mt-[40px]">OurProduct</h1>
-      <div className="flex flex-col-reverse lg:flex-row items-center paddings z-20">
-        <div className="flex-1">
+      <div className="text-center flex justify-center header mt-[40px]">
+        <h1
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-delay="100"
+        >
+          O
+        </h1>
+        <h1
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-delay="200"
+        >
+          u
+        </h1>
+        <h1
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-delay="300"
+        >
+          r
+        </h1>
+        <h1
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-delay="400"
+        >
+          P
+        </h1>
+        <h1
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-delay="450"
+        >
+          r
+        </h1>
+        <h1
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-delay="500"
+        >
+          o
+        </h1>
+        <h1
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-delay="550"
+        >
+          d
+        </h1>
+        <h1
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-delay="600"
+        >
+          u
+        </h1>
+        <h1
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-delay="650"
+        >
+          c
+        </h1>
+        <div
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-delay="700"
+        >
+          t
+        </div>
+      </div>
+      <div
+        className="flex flex-col-reverse lg:flex-row items-center paddings z-20"
+        // data-aos="fade-up"
+        // data-aos-anchor-placement="center-bottom"
+      >
+        <div
+          className="flex-1"
+          data-aos="fade-right"
+          data-aos-anchor-placement="bottom-bottom"
+          //  data-aos-anchor="#example-anchor"
+          // data-aos-offset="100"
+          data-aos-duration="350"
+        >
           <p>
             Produk Kamidancer merupakan singkatan dari kata Kakao, UMI
             (Universitas Muslim Indonesia) dan denture cleanser yang artinya
