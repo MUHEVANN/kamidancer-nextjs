@@ -19,76 +19,7 @@ const OurProduct = () => {
   return (
     <div id="product" className="h-auto relative ">
       <div className="text-center flex justify-center header mt-[40px]">
-        <h1
-          data-aos="fade-up"
-          data-aos-anchor-placement="bottom-bottom"
-          data-aos-delay="100"
-        >
-          O
-        </h1>
-        <h1
-          data-aos="fade-up"
-          data-aos-anchor-placement="bottom-bottom"
-          data-aos-delay="200"
-        >
-          u
-        </h1>
-        <h1
-          data-aos="fade-up"
-          data-aos-anchor-placement="bottom-bottom"
-          data-aos-delay="300"
-        >
-          r
-        </h1>
-        <h1
-          data-aos="fade-up"
-          data-aos-anchor-placement="bottom-bottom"
-          data-aos-delay="400"
-        >
-          P
-        </h1>
-        <h1
-          data-aos="fade-up"
-          data-aos-anchor-placement="bottom-bottom"
-          data-aos-delay="450"
-        >
-          r
-        </h1>
-        <h1
-          data-aos="fade-up"
-          data-aos-anchor-placement="bottom-bottom"
-          data-aos-delay="500"
-        >
-          o
-        </h1>
-        <h1
-          data-aos="fade-up"
-          data-aos-anchor-placement="bottom-bottom"
-          data-aos-delay="550"
-        >
-          d
-        </h1>
-        <h1
-          data-aos="fade-up"
-          data-aos-anchor-placement="bottom-bottom"
-          data-aos-delay="600"
-        >
-          u
-        </h1>
-        <h1
-          data-aos="fade-up"
-          data-aos-anchor-placement="bottom-bottom"
-          data-aos-delay="650"
-        >
-          c
-        </h1>
-        <div
-          data-aos="fade-up"
-          data-aos-anchor-placement="bottom-bottom"
-          data-aos-delay="700"
-        >
-          t
-        </div>
+        <h1>Our Product</h1>
       </div>
       <div
         className="flex flex-col-reverse lg:flex-row items-center paddings z-20"

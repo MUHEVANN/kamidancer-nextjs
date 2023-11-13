@@ -2,6 +2,7 @@
 import React from "react";
 import { BsArrowDown } from "react-icons/bs";
 const Hero = () => {
+  
   const goToProduct = () => {
     const id = document.getElementById("product");
     id.scrollIntoView({ behavior: "smooth" });
