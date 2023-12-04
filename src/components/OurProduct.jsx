@@ -26,14 +26,7 @@ const OurProduct = () => {
         // data-aos="fade-up"
         // data-aos-anchor-placement="center-bottom"
       >
-        <div
-          className="flex-1"
-          data-aos="fade-right"
-          data-aos-anchor-placement="bottom-bottom"
-          //  data-aos-anchor="#example-anchor"
-          // data-aos-offset="100"
-          data-aos-duration="350"
-        >
+        <div className="flex-1">
           <p>
             Produk Kamidancer merupakan singkatan dari kata Kakao, UMI
             (Universitas Muslim Indonesia) dan denture cleanser yang artinya

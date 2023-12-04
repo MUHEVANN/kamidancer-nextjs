@@ -9,12 +9,21 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
   let menu = useRef();
-  const NavLinks = ({ content, href }) => {
+
+  const close = () => {
+    setNavOpen(!navOpen);
+  };
+  const NavLinks = ({ content, href, text, click = null }) => {
     const router = usePathname();
 
     return (
-      <li>
-        <Link href={href} className="py-4 px-2 relative text-[#C79277] group">
+      <li onClick={click}>
+        <Link
+          href={href}
+          className={`py-4 px-2 relative ${
+            router === href ? "text-[#C79277]" : text
+          }  group`}
+        >
           {content}
           <span
             className={` h-1 bottom-0 group-hover:w-full rounded ease-in-out duration-300 left-0 absolute bg-[#C79277] ${
@@ -46,11 +55,11 @@ const Navbar = () => {
       </div>
       <div>
         <ul className="items-center gap-x-2 hidden md:flex text-white">
-          <NavLinks href={"/post"} content={"Home"} />
+          <NavLinks href={"/post"} content={"Home"} text={"text-[#C79277]"} />
           <NavLinks href={"/post/article"} content={"Article"} />
         </ul>
         <FiMenu
-          className="md:hidden text-white"
+          className="md:hidden text-[#C79277]"
           size={24}
           onClick={() => setNavOpen(!navOpen)}
         />
@@ -58,28 +67,23 @@ const Navbar = () => {
       {/* mobile */}
       <div
         ref={menu}
-        className={`w-[50%] h-screen ease-in-out duration-300 text-white  md:hidden px-5 pt-8 bg-black z-[100] fixed top-0 right-0 ${
+        className={`w-[50%] h-screen ease-in-out duration-300 text-white  md:hidden px-5 pt-8 bg-black/80 z-[100] fixed top-0 right-0 ${
           navOpen ? "right-0" : "right-[-100%]"
         }`}
       >
-        <ul className="items-center  md:flex flex-col">
-          <li className="flex justify-end">
-            <AiOutlineClose
-              className=""
-              size={24}
-              onClick={() => setNavOpen(!navOpen)}
-            />
-          </li>
-          <li>
-            <Link href="/post" className="py-4 px-2">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link href="/post/article" className="py-4 px-2">
-              Article
-            </Link>
-          </li>
+        <ul className=" gap-y-4 flex flex-col">
+          <NavLinks
+            href={"/post"}
+            content={"Home"}
+            text={"text-white"}
+            click={close}
+          />
+          <NavLinks
+            href={"/post/article"}
+            content={"Article"}
+            text={"text-white"}
+            click={close}
+          />
         </ul>
       </div>
     </div>
